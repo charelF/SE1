@@ -1,8 +1,13 @@
-@startuml component
-actor client
-node app
-database db
+@startuml
+(First usecase)
+(Another usecase) as (UC2)
+usecase UC3
+usecase (Last\nusecase) as UC4
 
-db -> app
-app -> client
+
+actor actCreator
+actor actAdministrator
+actor actUser
+
+actCreator --> UC2
 @enduml
