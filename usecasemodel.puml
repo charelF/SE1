@@ -1,13 +1,25 @@
 @startuml
-(First usecase)
-(Another usecase) as (UC2)
-usecase UC3
-usecase (Last\nusecase) as UC4
+usecase oeCreateSystemAndEnvironment as UC1
+usecase suDeployAndRun as UC2
+usecase ugAdministrateTheSystem as UC3
+usecase ugCRUDfiles as UC4
+usecase ugNavigateDirectory as UC5
 
 
-actor actCreator
-actor actAdministrator
-actor actUser
+actor actCreator as A1
+actor actAdministrator As A2
+actor actUser as A3
 
-actCreator --> UC2
+A1 --> UC1 : <<Primary>>\n<<Active>>
+
+A2 --> UC3 : <<Primary>>\n<<Active>>
+
+A3 --> UC4 : <<Primary>>\n<<Active>>
+
+A3 --> UC5 : <<Primary>>\n<<Active>>
+
+UC1 <-- UC2 : <<reuse>>\n[1..1]
+UC3 <--  UC2 : <<reuse>>\n[1..*]
+UC4 <--  UC2 : <<reuse>>\n[0..*]
+UC5 <--  UC2 : <<reuse>>\n[0..*]
 @enduml
