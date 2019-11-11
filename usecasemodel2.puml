@@ -1,0 +1,21 @@
+@startuml
+usecase ugCRUDfiles as UC2
+
+usecase sfCreateFile as UC41
+usecase sfCreateFile as UC42
+usecase sfCreateFile as UC43
+usecase sfCreateFile as UC44
+
+actor actUser as A3
+
+
+A3 --> UC41 : <<Primary>>\n<<Active>>
+A3 --> UC42 : <<Primary>>\n<<Active>>
+A3 --> UC43 : <<Primary>>\n<<Active>>
+A3 --> UC44 : <<Primary>>\n<<Active>>
+
+UC41 <-- UC2 : <<reuse>>\n[1..1]
+UC42 <--  UC2 : <<reuse>>\n[1..1]
+UC43 <--  UC2 : <<reuse>>\n[1..1]
+UC44 <--  UC2 : <<reuse>>\n[1..1]
+@enduml
