@@ -2,9 +2,9 @@
 usecase ugCRUDfiles as UC2
 
 usecase sfCreateFile as UC41
-usecase sfCreateFile as UC42
-usecase sfCreateFile as UC43
-usecase sfCreateFile as UC44
+usecase sfReadFile as UC42
+usecase sfUpdateFile as UC43
+usecase sfDeleteFile as UC44
 
 actor actUser as A3
 
