@@ -24,17 +24,17 @@ let print f =
 	let rec aux f pre = 
 		match f with
 			| Directory(n, c) ->
-				begin
-				match c with
-					| [Directory(_, _)] -> print_string pre
-					| _ -> print_string "xxxx"
-				end;
-				
+				(* begin *)
+				(* match c with *)
+					(* | [Directory(_, _)] -> print_string pre *)
+					(* | _ -> print_string "xxxx" *)
+				(* end; *)
+				print_string "+--";
 				print_string n;
 				print_newline ();
-				List.iter (fun i -> aux i (pre ^ "+---")) c
-			| TextFile(n, _) -> print_string pre; print_string n; print_newline ()
-			| PythonFile(n, _) -> print_string pre; print_string n; print_newline ()
+				List.iter (fun i -> aux i (pre ^ "   ")) c
+			| TextFile(n, _) -> print_string pre; print_string "+--"; print_string n; print_newline ()
+			| PythonFile(n, _) -> print_string pre; print_string "+--"; print_string n; print_newline ()
 
 	in aux f ""
 
@@ -54,7 +54,8 @@ let charel = combine charel sub1
 
 let main = Directory("main", [charel; sub1; file1; file2]);;
 
-
+print charel;;
+print_newline ();;
 print main;;
 
 
