@@ -1,0 +1,30 @@
+@startuml
+object "actUser" as A1
+object "outactUser" as A2
+object "inactUser" as A3
+
+A1 "1 rnActor" -- "1 rnInterfaceOUT" A2
+A1 "1 rnActor" -- "1 rnInterfaceOUT" A3
+
+A1 : init() = ptBoolean
+
+
+
+
+A2 : sfcreateFile(name: String) = ptBoolean
+A2 : sfreadFile(name: String) = ptBoolean
+A2 : sfupdateFile(name: String, content: String) = ptBoolean
+A2 : sfdeleteFile(name: String) = ptBoolean
+
+
+A2 : sfcreateDir(name: String) = ptBoolean
+A2 : sfreadDir(name: String) = ptBoolean
+A2 : sfupdateDir(name: String, content: String) = ptBoolean
+A2 : sfdeleteDir(name: String) = ptBoolean
+
+
+A2 : login(ActUser: dtUser, ActPwd: dtPwd) = ptBoolean
+A2 : logout() = ptBoolean
+
+A3 : ieMessage(Message: ptString) = ptBoolean
+@enduml
