@@ -10,6 +10,8 @@ A1 : init() = ptBoolean
 
 A2 : sfCreateUserDirectory(ActUser: dtUser) = ptBoolean
 A2 : sfDeleteUserDirectory(ActUser: dtUser) = ptBoolean
+A2 : login(ActUser: dtUser, ActPwd: dtPwd) = ptBoolean
+A2 : logout() = ptBoolean
 
 A3 : ieMessage(Message: ptString) = ptBoolean
 @enduml
