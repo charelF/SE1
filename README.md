@@ -10,6 +10,10 @@
 ![use case model](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/charelF/SE1/master/usecasemodel2.puml)
 
 
-## Environment model of acto actAdministrator
+## Interface of actor ```actAdministrator```
 
 ![use case model](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/charelF/SE1/master/environmentmodel1.puml)
+
+## Interface of actor ```actUser```
+
+![use case model](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/charelF/SE1/master/environmentmodel2.puml)
